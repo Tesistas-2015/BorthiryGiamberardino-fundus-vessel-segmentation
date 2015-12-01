@@ -1,6 +1,6 @@
-myDir = 'dataset/GER7/';
+myDir = '/home/dorian/Documentos/Tesis/matlab/dataset/GER7';
 ext_img = '*.bmp';
-a = dir([myDir ext_img]);
+a = dir(['dataset/GER7/*.bmp']);
 nfile = max(size(a))  % number of image files
 for i=1:nfile
   my_img(i).img = imread([myDir a(i).name]);
