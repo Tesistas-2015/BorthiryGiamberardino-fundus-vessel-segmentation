@@ -1,1 +1,4 @@
 dataset/*
+anisodiff_Perona-Malik/*
+coherencefilter/*
+regiongrowing.*
