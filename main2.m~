@@ -3,8 +3,6 @@ clear;
 close all;
 clc;
 %%
-
-%%
 %Cargo la imagen y normalizo
 I = im2double(imread('dataset/GER7TH/GER1.bmp'));
 GT = im2double(imread('dataset/GER7-GTTH/GER1-GT.png'));
@@ -55,5 +53,5 @@ threshold
 
 %%
 figure,
-subplot(1,2,1),imshow(preprocessed), title('Imagen preprocesada');
-subplot(1,2,2),imshow(filtered_image), title('Imagen filtrada');
+subplot(1,2,1),imshow(adapthisteq(preprocessed)), title('Imagen preprocesada');
+subplot(1,2,2),imshow(adapthisteq(filtered_image)), title('Imagen filtrada');

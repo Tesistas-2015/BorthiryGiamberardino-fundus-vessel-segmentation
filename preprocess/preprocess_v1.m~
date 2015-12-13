@@ -1,0 +1,15 @@
+function y = preprocess_v1(x,mask)
+    
+    % Version 1 de preprocesamiento
+    % 
+    % * Remover el fondo
+
+    med_30=medfilt2(x,[30 30]);
+    
+    without_background = x - med_30;
+    
+    
+    result=without_background;
+    result(mask<1)=0;
+    y=x;
+end
